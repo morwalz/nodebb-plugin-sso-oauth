@@ -42,29 +42,25 @@
 	 *     }
 	 *     ...
 	 *   }
-	 *
-	 *   ... or use environment variables instead:
-	 *
-	 *   `OAUTH__ID=someoauthid OAUTH__SECRET=youroauthsecret node app.js`
 	 */
 
 	var constants = Object.freeze({
-			type: '',	// Either 'oauth' or 'oauth2'
-			name: '',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
+			type: nconf.get('oauth:type'),	// Either 'oauth' or 'oauth2'
+			name: nconf.get('oauth:name'),	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
 			oauth: {
-				requestTokenURL: '',
-				accessTokenURL: '',
-				userAuthorizationURL: '',
+				requestTokenURL: nconf.get('oauth:requestTokenURL'),
+				accessTokenURL: nconf.get('oauth:accessTokenURL'),
+				userAuthorizationURL: nconf.get('oauth:userAuthorizationURL'),
 				consumerKey: nconf.get('oauth:key'),	// don't change this line
 				consumerSecret: nconf.get('oauth:secret'),	// don't change this line
 			},
 			oauth2: {
-				authorizationURL: '',
-				tokenURL: '',
-				clientID: nconf.get('oauth:id'),	// don't change this line
+				authorizationURL: nconf.get('oauth:authorizationURL'),
+				tokenURL: nconf.get('oauth:tokenURL'),
+				clientID: nconf.get('oauth:clientID'),	// don't change this line
 				clientSecret: nconf.get('oauth:secret'),	// don't change this line
 			},
-			userRoute: ''	// This is the address to your app's "user profile" API endpoint (expects JSON)
+			userRoute: nconf.get('oauth:userRoute')	// This is the address to your app's "user profile" API endpoint (expects JSON)
 		}),
 		configOk = false,
 		OAuth = {}, passportOAuth, opts;
