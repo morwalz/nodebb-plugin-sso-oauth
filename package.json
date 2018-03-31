@@ -1,11 +1,11 @@
 {
   "name": "nodebb-plugin-sso-oauth",
-  "version": "0.3.3",
+  "version": "1.0.0",
   "description": "NodeBB Generic OAuth SSO",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth"
+    "url": "https://github.com/morwalz/nodebb-plugin-sso-oauth"
   },
   "keywords": [
     "nodebb",
@@ -18,12 +18,12 @@
     "registration"
   ],
   "author": {
-    "name": "Julian Lam",
-    "email": "julian@nodebb.org"
+    "name": "Shankar Morwal",
+    "email": "morwal89@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth/issues"
+    "url": "https://github.com/morwalz/nodebb-plugin-sso-oauth/issues"
   },
   "readme": "",
   "readmeFilename": "README.md",
